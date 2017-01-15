@@ -36,5 +36,5 @@
 *~
 
 #Ignoring Executables
-./execs
-./exec/*
+execs
+exec/*
