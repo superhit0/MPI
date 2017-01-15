@@ -1,9 +1,3 @@
-# Ignore all
-*
-
-# Unignore all with extensions
-!*.*
-
 # Object files
 *.o
 *.ko
@@ -40,3 +34,8 @@
 
 #Swap Files
 *~
+
+#Ignoring Executables
+cpi
+hello
+sum2d
