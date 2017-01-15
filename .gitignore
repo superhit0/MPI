@@ -31,3 +31,9 @@
 # Debug files
 *.dSYM/
 *.su
+
+#Swap Files
+*~
+
+#Only C files needed
+!*.c
