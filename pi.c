@@ -24,14 +24,12 @@ int main(int argc, char** argv){
   double sum=0;
   long end=world_rank==world_size-1?n-1:(world_rank+1)*div;
   for(long i=world_rank*div;i<end;i++){
-    sum+=(1/(1+(i*base)*(i*base)));
+    sum+=((base*4)/(1+(i*base)*(i*base)));
   }
   double allsum=0;
   MPI_Reduce(&sum,&allsum,1,MPI_DOUBLE,MPI_SUM,0,MPI_COMM_WORLD);
   MPI_Barrier(MPI_COMM_WORLD);
   if(world_rank==0){
-    allsum*=4;
-    allsum*=base;
     printf("PI= %.17g \n",allsum);
   }
   MPI_Barrier(MPI_COMM_WORLD);
