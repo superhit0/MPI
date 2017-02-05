@@ -33,5 +33,5 @@ int main(int argc, char** argv){
     printf("PI= %.17g \n",allsum);
   }
   MPI_Barrier(MPI_COMM_WORLD);
-  return 0;
+  MPI_Finalize();
 }
